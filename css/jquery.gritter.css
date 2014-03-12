@@ -3,9 +3,10 @@
 	position:fixed;
 	top:20px;
 	right:20px;
-	width:301px;
+	width:305px;
 	z-index:9999;
 }
+
 #gritter-notice-wrapper.top-left {
     left: 20px;
     right: auto;
@@ -22,37 +23,40 @@
     bottom: 20px;
     left: 20px;
 }
+
 .gritter-item-wrapper {
-	position:relative;
-	margin:0 0 10px 0;
-	background:url('../images/ie-spacer.gif'); /* ie7/8 fix */ 
+    margin-bottom: 10px;
+    padding: 2px;
 }
-.gritter-top {
-	background:url(../images/gritter.png) no-repeat left -30px;
-	height:10px;
+.gritter-item-wrapper:hover {
+    border: 2px solid #FFF;
+    padding: 0px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    -moz-box-shadow: 2px 2px 3px 0px #656565;
+    -webkit-box-shadow: 2px 2px 3px 0px #656565;
+    -o-box-shadow: 2px 2px 3px 0px #656565;
+    box-shadow: 2px 2px 3px 0px #656565;
 }
-.hover .gritter-top {
-	background-position:right -30px;
-}
-.gritter-bottom {
-	background:url(../images/gritter.png) no-repeat left bottom;
-	height:8px;
-	margin:0;
-}
-.hover .gritter-bottom {
-	background-position: bottom right;
-}
+
 .gritter-item {
+        position: relative; 
 	display:block;
-	background:url(../images/gritter.png) no-repeat left -40px;
+        background: #000;
+	-moz-opacity: 0.70;
+        opacity: 0.70;
+        -ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=70);
 	color:#eee;
-	padding:2px 11px 8px 11px;
+	padding:8px 11px 8px 11px;
 	font-size: 11px;
 	font-family:verdana;
+        filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=3);
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        border-radius: 8px;
 }
-.hover .gritter-item {
-	background-position:right -40px;
-}
+
 .gritter-item p {
 	padding:0;
 	margin:0;
@@ -63,7 +67,7 @@
 	position:absolute;
 	top:5px;
 	left:3px;
-	background:url(../images/gritter.png) no-repeat left top;
+	background:url(../images/close.png) no-repeat left top;
 	cursor:pointer;
 	width:30px;
 	height:30px;
@@ -91,11 +95,9 @@
 }
 /* for the light (white) version of the gritter notice */
 .gritter-light .gritter-item,
-.gritter-light .gritter-bottom,
-.gritter-light .gritter-top,
 .gritter-light .gritter-close {
-    background-image: url(../images/gritter-light.png);
     color: #222;
+    background: #FFF;
 }
 .gritter-light .gritter-title {
     text-shadow: none;
